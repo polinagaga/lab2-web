@@ -1,0 +1,74 @@
+/* Явне керування блоковою моделлю */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Селектор ID (#main-header) та керування відступами */
+#main-header {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 30px; /* padding */
+    text-align: center;
+    border-bottom: 4px solid #3b82f6; /* border */
+}
+
+/* Селектор класу (.cv-container) та макет на Flexbox */
+.cv-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    max-width: 900px;
+    margin: 30px auto; /* margin */
+    padding: 0 15px;
+}
+
+/* Селектор класу (.card) */
+.card {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Селектор тега (h2) */
+h2 {
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+/* Псевдоклас :first-child */
+ul li:first-child {
+    font-weight: 500;
+}
+
+/* Селектор атрибута + Псевдоклас :hover */
+[class="card"]:hover {
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    border-color: #3b82f6;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #64748b;
+}
+
+/* Медіазапит для адаптивності на вузьких екранах */
+@media (max-width: 600px) {
+    .cv-container {
+        flex-direction: column; /* Зміна горизонтального макета на вертикальний */
+    }
+}

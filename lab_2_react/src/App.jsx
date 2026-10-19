@@ -5,9 +5,9 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen bg-emerald-50/30 flex flex-col justify-between font-sans">
       <Header />
-      <main>
+      <main className="max-w-4xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
         <About />
         <Experience />
       </main>
